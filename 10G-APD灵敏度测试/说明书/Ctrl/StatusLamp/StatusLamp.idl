@@ -1,0 +1,66 @@
+// StatusLamp.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(StatusLamp.tlb)，该类型库将成为
+// StatusLamp.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(719C8216-BFF6-4A40-A646-0318C17EBDDE), version(1.0),
+  helpfile("StatusLamp.hlp"),
+  helpstring("StatusLamp ActiveX 控件模块"),
+  control ]
+library StatusLampLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CStatusLampCtrl 的主调度接口
+
+	[ uuid(CD85728B-92CA-4397-A2BF-F7023109E96C),
+	  helpstring("StatusLamp Control 的调度接口")]
+	dispinterface _DStatusLamp
+	{
+		properties:
+			[id(1) , helpstring("作为状态指示灯时的控件状态"), bindable, requestedit] VARIANT_BOOL LampStatus;
+			[id(2) , helpstring("控件显示的消息字符串"), bindable, requestedit] BSTR MsgText;
+			[id(3) , helpstring("控件类型( 0: 圆角按钮型 1:平面标签型 )"), bindable, requestedit] SHORT Style;
+			[id(4) , helpstring("控件背景色"), bindable, requestedit] OLE_COLOR BkColor;
+			[id(5) , helpstring("边框颜色"), bindable, requestedit] OLE_COLOR BolderColor;
+			[id(6) , helpstring("是否显示边框"), bindable, requestedit] VARIANT_BOOL BolderVisible;
+			[id(7) , helpstring("字符垂直位置( 0:靠上 1:居中 2:靠下 )"), bindable, requestedit] ULONG V_Alignment;
+			[id(8) , helpstring("字符水平位置( 0:靠左  1:居中  2:靠右 ) "), bindable, requestedit] ULONG Alignment;
+			[id(9) , helpstring("是否显示消息字符串"), bindable, requestedit] VARIANT_BOOL TextVisible;
+			[id(10) , helpstring("消息字符串文字颜色"), bindable, requestedit] OLE_COLOR MsgTextColor;
+			[id(11) , helpstring("消息字符串高度"), bindable, requestedit] SHORT TextHeight;
+			[id(DISPID_FONT), helpstring("属性 Font"), bindable, requestedit] IFontDisp*Font;
+			[id(DISPID_BACKCOLOR), helpstring("属性 BackColor"), bindable, requestedit] OLE_COLOR BackColor;
+			[id(DISPID_FORECOLOR), helpstring("属性 ForeColor"), bindable, requestedit] OLE_COLOR ForeColor;
+			[id(12) , helpstring("设置控件边框是否为圆角"), bindable, requestedit] VARIANT_BOOL RoundRect;
+	methods:	
+	
+	};
+
+	//  CStatusLampCtrl 的事件调度接口
+
+	[ uuid(96B7E964-D07D-419E-9404-A7FE5FB946BB),
+	  helpstring("StatusLamp Control 的事件接口") ]
+	dispinterface _DStatusLampEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CStatusLampCtrl 的类信息
+
+	[ uuid(45A71C0E-E00C-4D19-991E-F6C085955332),
+	  helpstring("StatusLamp Control"), control ]
+	coclass StatusLamp
+	{
+		[default] dispinterface _DStatusLamp;
+		[default, source] dispinterface _DStatusLampEvents;
+	};
+
+};

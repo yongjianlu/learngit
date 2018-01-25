@@ -1,0 +1,408 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\My10GAPDTEST.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\10G-APD-TEST.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 10G-APD-TEST"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "10G-APD-TEST，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_MY10GAPDTEST_DIALOG DIALOGEX 0, 0, 591, 355
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "10G-APD灵敏度测试 2018-01-23  V1.2"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_WorkOrderNo_EDIT,58,24,62,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BatchNo_EDIT,58,43,62,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PDModel_EDIT,58,61,63,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Model_EDIT,58,102,62,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_SN_EDIT,58,81,62,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TestEr_EDIT,58,124,62,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "规格数据提取",IDC_ExtractData_BUTTON,174,240,111,22
+    PUSHBUTTON      "设备初始化",IDC_DeviceInit_BUTTON,174,269,111,23
+    PUSHBUTTON      "开启批量测试",IDC_BeginTest_BUTTON,174,297,111,24
+    GROUPBOX        "规格数据",IDC_STATIC,131,11,173,138
+    GROUPBOX        "",IDC_STATIC,166,203,127,123
+    GROUPBOX        "灵敏度测试拟合数据",IDC_STATIC,310,159,114,172,BS_CENTER
+    CONTROL         "自定义1",IDC_GridTS,"MFCGridCtrl",WS_TABSTOP,433,178,137,145
+    CTEXT           "PASS",IDC_Results_STATIC,430,45,142,100,SS_CENTERIMAGE
+    LTEXT           "工单号：",IDC_STATIC,22,28,30,8
+    LTEXT           "批次号：",IDC_STATIC,22,46,30,8
+    LTEXT           "PD型号：",IDC_STATIC,22,64,30,8
+    LTEXT           "产品型号：",IDC_STATIC,22,105,35,8
+    LTEXT           "系列号：",IDC_STATIC,22,84,35,8
+    LTEXT           "测试账号：",IDC_STATIC,23,127,35,8
+    LTEXT           "误码仪通道选择：",IDC_STATIC,26,256,56,8
+    COMBOBOX        IDC_Channel_COMBO,95,253,48,36,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪码型选择：",IDC_STATIC,26,275,56,8
+    COMBOBOX        IDC_Type_COMBO,95,273,48,36,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪速率选择：",IDC_STATIC,26,296,56,8
+    COMBOBOX        IDC_Rate_COMBO,95,293,48,81,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪幅度选择：",IDC_STATIC,26,315,56,8
+    COMBOBOX        IDC_Amplitude_COMBO,95,312,48,80,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vbr测试仪Vop取值：",IDC_STATIC,26,176,68,8
+    COMBOBOX        IDC_VopVal_COMBO,95,173,48,57,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "光功率计波长选择：",IDC_STATIC,26,216,63,8
+    COMBOBOX        IDC_PowerWavelength_COMBO,95,214,48,82,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "光衰减器波长选择：",IDC_STATIC,26,236,63,8
+    COMBOBOX        IDC_AttWavelength_COMBO,95,234,48,36,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "设备初始化与光校准",IDC_STATIC,15,159,289,172
+    GROUPBOX        "器件基本信息",IDC_STATIC,15,11,112,138
+    LTEXT           "IccMin：",IDC_STATIC,141,47,27,8
+    EDITTEXT        IDC_IccMin_EDIT,170,44,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_IccMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,202,43,10,14
+    LTEXT           "IccMax：",IDC_STATIC,141,25,28,8
+    EDITTEXT        IDC_IccMax_EDIT,170,22,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_IccMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,202,21,10,14
+    LTEXT           "IdMin：",IDC_STATIC,221,47,27,8
+    EDITTEXT        IDC_IdMin_EDIT,258,44,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_IdMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,290,43,10,14
+    LTEXT           "IdMax：",IDC_STATIC,220,26,28,8
+    EDITTEXT        IDC_IdMax_EDIT,259,23,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_IdMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,291,22,10,14
+    LTEXT           "VbrMin：",IDC_STATIC,141,90,31,8
+    EDITTEXT        IDC_VbrMin_EDIT,170,87,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_VbrMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,202,86,10,14
+    LTEXT           "VbrMax：",IDC_STATIC,140,68,32,8
+    EDITTEXT        IDC_VbrMax_EDIT,170,65,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_VbrMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,202,64,10,14
+    LTEXT           "SenMin：",IDC_STATIC,220,90,31,8
+    EDITTEXT        IDC_SenMin_EDIT,258,87,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SenMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,290,86,10,14
+    LTEXT           "SenMax：",IDC_STATIC,220,68,33,8
+    EDITTEXT        IDC_SenMax_EDIT,258,65,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SenMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,290,64,10,14
+    LTEXT           "SenVal：",IDC_STATIC,141,112,29,8
+    EDITTEXT        IDC_SenGo_EDIT,170,109,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SenGo_SPIN,"msctls_updown32",UDS_ARROWKEYS,202,108,10,14
+    LTEXT           "Sen步长：",IDC_STATIC,221,112,34,8
+    EDITTEXT        IDC_SenStep_EDIT,258,109,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SenStep_SPIN,"msctls_updown32",UDS_ARROWKEYS,290,108,10,14
+    CONTROL         "自定义1",IDC_GridDS,"MFCGridCtrl",WS_TABSTOP,315,24,105,118
+    GROUPBOX        "统计信息",IDC_STATIC,310,11,114,138,BS_CENTER
+    CONTROL         "自定义1",IDC_GridFitt,"MFCGridCtrl",WS_TABSTOP,314,178,105,145
+    GROUPBOX        "测试结果",IDC_STATIC,429,159,144,171,BS_CENTER
+    GROUPBOX        "光校准",IDC_STATIC,166,169,127,30,BS_CENTER
+    PUSHBUTTON      "开始光校准",IDC_Calibration1_BUTTON,240,178,50,14
+    LTEXT           "△P:",IDC_STATIC,173,182,14,8
+    EDITTEXT        IDC_TanP_EDIT,191,179,32,13,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "流转系统",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,176,214,43,10
+    LTEXT           "误码率选择：",IDC_STATIC,27,195,42,8
+    LTEXT           "SenTime：",IDC_STATIC,135,133,36,8
+    EDITTEXT        IDC_SenTime_EDIT,170,130,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    CONTROL         "",IDC_SenGo_SPIN2,"msctls_updown32",UDS_ARROWKEYS,202,129,10,14
+    CTEXT           "静态",IDC_STATIC1,430,14,137,22,SS_CENTERIMAGE
+    LTEXT           "测试进度：",IDC_STATIC,26,341,37,8
+    LTEXT           "测试时长（S）：",IDC_STATIC,245,341,53,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,65,340,80,12
+    LTEXT           "登录账号：",IDC_STATIC,417,341,35,8
+    LTEXT           "",IDC_TestUser_STATIC,454,341,28,8
+    LTEXT           "测试人员：",IDC_STATIC,492,341,35,8
+    LTEXT           "",IDC_TestErName_STATIC,529,341,28,8
+    LTEXT           "0",IDC_TESTTIME_STATIC,301,341,28,8
+    LTEXT           "Sen补偿：",IDC_STATIC,221,135,34,8
+    EDITTEXT        IDC_CompensationVal_EDIT,258,131,32,13,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_Vbr_EDIT,95,193,48,13,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "验证服务器",IDC_TESTSPEC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,227,50,10
+END
+
+IDD_LOGIN_DIALOG DIALOGEX 0, 0, 328, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户登录与模式选择"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_Account_EDIT,63,36,78,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PassWord_EDIT,63,66,78,16,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "用户登录",IDC_Login_BUTTON,186,48,81,21
+    COMBOBOX        IDC_Model_COMBO,92,127,71,57,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "进入测试界面",IDC_GoTestModel_BUTTON,184,123,81,21
+    PUSHBUTTON      "进入规格配置界面",IDC_GoSpecConfig_BUTTON,20,111,81,19,NOT WS_VISIBLE | WS_DISABLED
+    LTEXT           "账号：",IDC_STATIC,34,41,25,8
+    GROUPBOX        "用户登录",IDC_STATIC,17,17,290,80
+    LTEXT           "密码：",IDC_STATIC,34,71,25,8
+    GROUPBOX        "测试器件类型选择",IDC_STATIC,17,103,292,56
+    LTEXT           "器件类型选择：",IDC_STATIC,30,130,57,8
+END
+
+IDD_SpecConfig_DIALOG DIALOGEX 0, 0, 453, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "规格配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "读取规格",IDC_ReadSpec_BUTTON,250,210,66,22
+    PUSHBUTTON      "写入规格",IDC_WriteSpec_BUTTON,353,209,66,22
+    PUSHBUTTON      "返回上一级<<<<",IDC_NextHigLeve_BUTTON,25,25,120,19
+    LTEXT           "IccMin：",IDC_STATIC,29,83,31,9
+    EDITTEXT        IDC_IccMin_EDIT,63,80,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IccMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,100,79,11,15
+    LTEXT           "IccMax：",IDC_STATIC,29,54,33,9
+    EDITTEXT        IDC_IccMax_EDIT,63,51,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IccMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,100,50,11,15
+    LTEXT           "IdMin：",IDC_STATIC,122,83,31,9
+    EDITTEXT        IDC_IdMin_EDIT,165,80,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IdMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,203,79,11,15
+    LTEXT           "IdMax：",IDC_STATIC,121,55,33,9
+    EDITTEXT        IDC_IdMax_EDIT,167,52,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IdMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,204,51,11,15
+    LTEXT           "VbrMin：",IDC_STATIC,29,139,36,9
+    EDITTEXT        IDC_VbrMin_EDIT,63,136,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VbrMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,100,135,11,15
+    LTEXT           "VbrMax：",IDC_STATIC,28,110,37,9
+    EDITTEXT        IDC_VbrMax_EDIT,63,107,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VbrMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,100,106,11,15
+    LTEXT           "SenMin：",IDC_STATIC,121,139,36,9
+    EDITTEXT        IDC_SenMin_EDIT,165,136,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SenMin_SPIN,"msctls_updown32",UDS_ARROWKEYS,203,135,11,15
+    LTEXT           "SenMax：",IDC_STATIC,121,110,39,9
+    EDITTEXT        IDC_SenMax_EDIT,165,107,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SenMax_SPIN,"msctls_updown32",UDS_ARROWKEYS,203,106,11,15
+    LTEXT           "SenVal：",IDC_STATIC,29,166,34,9
+    EDITTEXT        IDC_SenGo_EDIT,63,163,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SenGo_SPIN,"msctls_updown32",UDS_ARROWKEYS,100,163,11,15
+    LTEXT           "Sen步长：",IDC_STATIC,122,166,40,9
+    EDITTEXT        IDC_SenStep_EDIT,165,163,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SenStep_SPIN,"msctls_updown32",UDS_ARROWKEYS,203,162,11,15
+    GROUPBOX        "规格数据",IDC_STATIC,19,15,207,172
+    LTEXT           "误码仪通道选择：",IDC_STATIC,255,115,65,9
+    COMBOBOX        IDC_Channel_COMBO,354,112,56,36,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪码型选择：",IDC_STATIC,255,132,65,9
+    COMBOBOX        IDC_Type_COMBO,354,131,56,36,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪速率选择：",IDC_STATIC,254,153,65,9
+    COMBOBOX        IDC_Rate_COMBO,354,150,56,81,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "误码仪幅度选择：",IDC_STATIC,254,172,65,9
+    COMBOBOX        IDC_Amplitude_COMBO,354,169,56,80,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vbr测试仪Vop取值：",IDC_STATIC,255,34,79,9
+    COMBOBOX        IDC_VopVal_COMBO,354,31,56,57,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "光功率计波长选择：",IDC_STATIC,255,75,73,9
+    COMBOBOX        IDC_PowerWavelength_COMBO,354,72,56,82,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "光衰减器波长选择：",IDC_STATIC,255,95,73,9
+    COMBOBOX        IDC_AttWavelength_COMBO,354,92,56,36,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "设备初始化规格",IDC_STATIC,241,15,185,172
+    GROUPBOX        "权限获取",IDC_STATIC,21,189,206,58
+    LTEXT           "密码：",IDC_STATIC,28,216,27,9
+    EDITTEXT        IDC_PassWord_EDIT,53,212,81,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "写入密码",IDC_WritePassWord_BUTTON,154,210,61,19
+    GROUPBOX        "权限获取",IDC_STATIC,241,191,186,55
+    LTEXT           "误码率选择：",IDC_STATIC,255,54,49,9
+    COMBOBOX        IDC_VbrVal_COMBO,354,51,56,82,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 217, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入测量到的光功率值"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,132,79,50,14
+    DEFPUSHBUTTON   "确定",IDOK,32,79,50,14
+    LTEXT           "请输入测量到的光功率值：",IDC_STATIC,19,36,96,12
+    EDITTEXT        IDC_Power_EDIT,119,31,59,18,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <APAT>"
+            VALUE "FileDescription", "TODO: <灵敏度测试软件>"
+            VALUE "FileVersion", "1.0.0.2"
+            VALUE "InternalName", "10G-APD-TEST.exe"
+            VALUE "LegalCopyright", "TODO: (C) <APAT>。保留所有权利。"
+            VALUE "OriginalFilename", "10G-APD-TEST.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_MY10GAPDTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 584
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 337
+    END
+
+    IDD_LOGIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 321
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_SpecConfig_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 446
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 10G-APD-TEST(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\My10GAPDTEST.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

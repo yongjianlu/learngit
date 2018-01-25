@@ -1,0 +1,6 @@
+新增的单元格的类型：
+	GridCellCheck.h  	------》代表选中框
+	GridCellCombo.h  	------》代表下拉选择框
+	GridCellDateTime.h	------》代表时间
+	GridCellNumeric.h	------》代表数值
+	GridURLCell.h		------》代表网址
